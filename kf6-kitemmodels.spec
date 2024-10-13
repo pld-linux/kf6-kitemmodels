@@ -96,8 +96,8 @@ rm -rf $RPM_BUILD_ROOT
 %{qt6dir}/qml/org/kde/kitemmodels/qmldir
 %{_datadir}/qlogging-categories6/kitemmodels.categories
 %{_datadir}/qlogging-categories6/kitemmodels.renamecategories
-%{_libdir}/qt6/qml/org/kde/kitemmodels/itemmodelsplugin.qmltypes
-%{_libdir}/qt6/qml/org/kde/kitemmodels/kde-qmlmodule.version
+%{qt6dir}/qml/org/kde/kitemmodels/itemmodelsplugin.qmltypes
+%{qt6dir}/qml/org/kde/kitemmodels/kde-qmlmodule.version
 
 %files devel
 %defattr(644,root,root,755)
