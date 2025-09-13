@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.17
+%define		kdeframever	6.18
 %define		qtver		5.15.2
 %define		kfname		kitemmodels
 
 Summary:	Set of item models extending the Qt model-view framework
 Name:		kf6-%{kfname}
-Version:	6.17.0
+Version:	6.18.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	4aca52e11e671da59d87c24de5206055
+# Source0-md5:	680df3a25454d60a509ed232fae17bda
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -27,6 +27,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	kf6-dirs
 #Obsoletes:	kf5-%{kfname} < %{version}
+%requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
