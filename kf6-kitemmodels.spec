@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		kitemmodels
 
 Summary:	Set of item models extending the Qt model-view framework
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	680df3a25454d60a509ed232fae17bda
+# Source0-md5:	6c1d06b9c62c83a4bb89ae6263b1afc1
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -91,9 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6ItemModels.so.6
-%attr(755,root,root) %{_libdir}/libKF6ItemModels.so.*.*
+%{_libdir}/libKF6ItemModels.so.*.*
 %dir %{qt6dir}/qml/org/kde/kitemmodels
-%attr(755,root,root) %{qt6dir}/qml/org/kde/kitemmodels/libitemmodelsplugin.so
+%{qt6dir}/qml/org/kde/kitemmodels/libitemmodelsplugin.so
 %{qt6dir}/qml/org/kde/kitemmodels/qmldir
 %{_datadir}/qlogging-categories6/kitemmodels.categories
 %{_datadir}/qlogging-categories6/kitemmodels.renamecategories
