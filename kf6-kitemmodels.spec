@@ -48,6 +48,22 @@ KItemModels provides the following models:
 - KSelectionProxyModel - A Proxy Model which presents a subset of its
   source model to observers
 
+%description -l pl.UTF-8
+KItemModels dostarcza następujących modeli:
+
+- KBreadcrumbSelectionModel - Wybiera rodziców wybranych elementów,
+  żeby utworzyć "okruszki"
+- KCheckableProxyModel - Dodaje możliwość zaznaczania do źródłowego
+  modelu
+- KDescendantsProxyModel - Model proxy do zmiany drzewa w listę
+- KLinkItemSelectionModel - Współdzieli wybór w wielu widokach, które
+  nie mają tego samego modelu źródłowego
+- KModelIndexProxyMapper - Odwzorowuje indeksy i zaznaczenia przez
+  modele proxy
+- KRecursiveFilterProxyModel - Rekurencyjne filtrowanie modeli
+- KSelectionProxyModel - Model proxy, który prezentuje podzbiór modelu
+  źródłowego do obserwatorów
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
